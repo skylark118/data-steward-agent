@@ -5,9 +5,17 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+
 jobs:
-  noop:
+  link-check:
+    name: Check internal Markdown links
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Governance CI wiring placeholder"
+      - name: Check relative links (offline — no external network)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --offline only validates local/relative links, so external URLs
+          # (skylark118.com, docs) never cause flaky failures.
+          args: --offline --no-progress '**/*.md'
+          fail: true
