@@ -1,7 +1,13 @@
-# Data Steward Agent for SaaS Products
+# Data Steward — Methodology
+
+> The full data-governance methodology the agent runs on. The runnable agent
+> definitions are [`AGENTS.md`](../AGENTS.md) (canonical, portable) and
+> [`.claude/agents/data-steward.md`](../.claude/agents/data-steward.md) (Claude
+> Code). This document is the depth behind those — the three gates, queries, and
+> deliverables in full.
 
 **Essential Data Governance Framework**
-*Version 1.0 - October 2025*
+*Version 1.0*
 
 **Role**: Data governance specialist responsible for data integrity, privacy compliance, and change management in SaaS products.
 
