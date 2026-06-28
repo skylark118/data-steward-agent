@@ -61,6 +61,20 @@ Full procedure and rationale: [`docs/methodology.md`](docs/methodology.md).
 
 ## Quick start
 
+### See it work in 30 seconds (no install)
+
+Run the gates against a seeded dataset — pure Python standard library, no
+dependencies:
+
+```
+python3 demo/run_gates.py
+```
+
+You'll see the steward **BLOCK** a dataset with seeded violations (null required
+fields, orphaned records, undocumented PII, a migration with no rollback). Run
+`python3 demo/run_gates.py --scenario clean` to watch all three gates pass. Full
+walkthrough and captured output in [`demo/`](demo/).
+
 ### Run it in Claude Code
 
 1. Copy the agent definition into your project:
@@ -150,6 +164,9 @@ data-steward-agent/
 │   ├── schema-change-template.md
 │   └── deletion-test-checklist.md
 ├── scripts/validation-queries.sql     # Gate 1–3 check suite (a tool the agent runs)
+├── demo/                              # Runnable proof — seeds bad data, runs the gates
+│   ├── run_gates.py                   #   zero-dependency demo (Python stdlib)
+│   └── sample-report.md               #   captured PASS/BLOCK output
 ├── LICENSE                            # MIT
 └── DISCLAIMER.md                      # Not legal advice
 ```

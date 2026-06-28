@@ -104,6 +104,7 @@ Full procedure, queries, and rationale: [`docs/methodology.md`](docs/methodology
 Bundled assets the agent uses:
 - [`scripts/validation-queries.sql`](scripts/validation-queries.sql) — the Gate 1–3 check suite
 - [`templates/`](templates/) — the output artifacts it fills in
+- [`demo/run_gates.py`](demo/run_gates.py) — a runnable reference that executes the three gates against seeded data
 
 ---
 
